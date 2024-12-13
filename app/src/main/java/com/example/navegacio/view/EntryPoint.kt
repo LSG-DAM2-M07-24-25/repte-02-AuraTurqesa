@@ -25,12 +25,12 @@ fun EntryPoint(navigationController: NavController) {
         composable(
             Routes.Pantalla2.route,
             arguments = listOf(
-                navArgument("nom") { type = NavType.StringType },
-                navArgument("nom") {})
+                navArgument("nomPersonatge") { type = NavType.StringType },
+                navArgument("nomPersonatge") {})
         ) { backStackEntry ->
             Screen2(
                 navigationController,
-                backStackEntry.arguments?.getString("nom").orEmpty()
+                backStackEntry.arguments?.getString("nomPersonatge").orEmpty()
             )
         }
 
@@ -38,15 +38,12 @@ fun EntryPoint(navigationController: NavController) {
         composable(
             Routes.Pantalla3.route,
             arguments = listOf(
-                navArgument("nom") { type = NavType.StringType },
-                navArgument("salutacio") { type = NavType.StringType },
-                navArgument("edat") { type = NavType.IntType })
+                navArgument("nomUsuari") { type = NavType.StringType },
+                navArgument("nomUsuari") {})
         ) { backStackEntry ->
             Screen3(
                 navigationController,
-                backStackEntry.arguments?.getString("nom").orEmpty(),
-                backStackEntry.arguments?.getString("salutacio").orEmpty(),
-                backStackEntry.arguments?.getInt("edat") ?: 0
+                backStackEntry.arguments?.getString("nomUsuari").orEmpty()
             )
         }
     }
