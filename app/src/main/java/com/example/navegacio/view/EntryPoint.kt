@@ -9,12 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.navegacio.Routes
 
-/**
- * Definim el composable NavHost que el cridarem des del Main
- * @param navigationController
- * @author RIS
- * @since 2024-11-20
- */
+
 @Composable
 fun EntryPoint(navigationController: NavController) {
     // Definim el component NavHost per a establir les rutes entre pantalles
